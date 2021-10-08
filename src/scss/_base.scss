@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap");
+
+$text-color-primary: #ffffff;
+$text-color-secondary: #ef7300;
+
+$bg-color-primary: #000000;
+$bg-color-secondary: #0e0e0e;
+
+$black-primary: #16181b;
+$black-secondary: #121417;
+$border-color: #4c4c4c;
+
+$breakpoint-medium: 990px;
+$breakpoint-web:1100px;
+$breakpoint-small: 520px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $black-secondary;
+  background-attachment: fixed;
+  color: $text-color-primary;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+@mixin line-clamp($lineNumber) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNumber;
+  -webkit-box-orient: vertical;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}

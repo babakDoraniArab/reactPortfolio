@@ -1,0 +1,63 @@
+@import "../../scss/_base.scss";
+.sidebar__wrapper {
+  height: 100vh;
+  display: grid;
+
+  grid-template-areas:
+    ". header ."
+    ". menu .  "
+    ". bot .  ";
+  grid-template-rows: 1fr 1.7fr 0.3fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  &__header {
+    position: relative;
+    grid-area: header;
+    h1 {
+      text-transform: uppercase;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 151%;
+      letter-spacing: 0.37em;
+      position: absolute;
+      width: 214px;
+      height: 45px;
+
+      left: 0;
+      bottom: 53px;
+      margin: 0 auto;
+      transition: font-size 400ms ease;
+    }
+    @media screen and (max-width: $breakpoint-medium) {
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  &__menu {
+    grid-area: menu;
+    ul {
+      list-style: none;
+      li {
+        line-height: 50px;
+        a {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 153.5%;
+          /* or 21px */
+
+          letter-spacing: 0.085em;
+          text-transform: capitalize;
+          text-decoration: none;
+          color: $text-color-primary;
+        }
+      }
+    }
+  }
+  &__bot {
+    grid-area: bot;
+  }
+}

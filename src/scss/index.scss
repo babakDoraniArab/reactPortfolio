@@ -1,0 +1,17 @@
+@import "base";
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+
+  .sidebar {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: $bg-color-secondary;
+    height: 100vh;
+  }
+  .content {
+    grid-column-start: 6;
+    grid-column-end: 19;
+  }
+}
