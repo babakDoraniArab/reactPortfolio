@@ -14,7 +14,7 @@ const HomeVariants = {
   animate: {
     opacity: 1,
     y: 0,
-  
+
     transition: {
       delay: 0.2,
       ease: "easeOut",
@@ -38,7 +38,7 @@ const Home = () => {
       variants={HomeVariants}
       initial="initial"
       animate="animate"
-     exit="exit"
+      exit="exit"
     >
       <div className="home__content">
         <div className="home__content__img"></div>
@@ -50,11 +50,9 @@ const Home = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               corporis eos corrupti itaque ex blanditiis cumque quas, reiciendis
-              alias nulla qui, voluptate perferendis nemo dolore. Ratione
-              reprehenderit ad debitis nesciunt!
             </p>
           </div>
-         
+
           <div className="home__content__text__social">
             <FaFacebookF className="home__content__text__social__icon" />
             <RiInstagramFill className="home__content__text__social__icon" />
