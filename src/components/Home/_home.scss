@@ -1,0 +1,82 @@
+@import "../../scss/_base.scss";
+.home {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr 3fr 2fr;
+  &__content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+
+    &__text {
+      width: 700px;
+      height: 300;
+      padding: 30px;
+      &__social {
+        &__icon {
+          font-size: 1.5 rem;
+          margin-right: 10px;
+        }
+      }
+      &__desc {
+        p {
+          margin: 20px 0;
+        }
+      }
+      &__title {
+        display: flex;
+
+        h1 {
+          text-align: center;
+          justify-content: start;
+          align-items: center;
+          color: $text-color-primary;
+          text-transform: uppercase;
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+    &__img {
+      overflow: hidden;
+      margin-left: 100px;
+      margin-right: 100px;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: morph 8s ease-in-out infinite 1s;
+      background-blend-mode: multiply;
+      -webkit-box-shadow: inset 0px 0px 0px 9px #ffffff26;
+      -moz-box-shadow: inset 0px 0px 0px 9px #ffffff26;
+      box-shadow: inset 0px 0px 0px 9px #ffffff26;
+
+     
+      img {
+        border-color: gray;
+        border: 5px solid gray;
+        width: 100%;
+        position: absolute;
+        top: 10px;
+      }
+    }
+
+    @keyframes morph {
+      0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+      1% {
+        border-radius: 60% 41% 32% 71% / 60% 30% 70% 40%;
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+      100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+    }
+  }
+}

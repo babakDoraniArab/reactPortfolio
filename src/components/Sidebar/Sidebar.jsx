@@ -28,7 +28,12 @@ const childrenVariants = {
   animate: {
     opacity: 1,
     y: "0vh",
-    transition: { delay: 1.5, ease: "easeOut", duration: 0.5 },
+    transition: {
+      delay: 1.5,
+      ease: "easeOut",
+      duration: 0.5,
+      staggerChildren: 0.5,
+    },
   },
   exit: {},
 };
