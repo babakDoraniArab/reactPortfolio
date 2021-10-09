@@ -2,24 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const liVariants = {
-  initial: {
-    opacity: 0,
-    x: "-1vh",
-  },
-  animate: {
-    opacity: 1,
-    x: "0vh",
+  hover: {
+    letterSpacing: "14px",
+
     transition: {
-      ease: "easeOut",
-      duration: 0.4,
-      delay: 0.5,
+      duration: 0.2,
+      ease: "easeInOut",
     },
   },
 };
 
 const SidbarLinks = ({ name }) => {
   return (
-    <motion.li>
+    <motion.li variants={liVariants} whileHover="hover">
       <Link to={name}>{name}</Link>
     </motion.li>
   );

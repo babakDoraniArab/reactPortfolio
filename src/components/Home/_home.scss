@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-around;
     clear: both;
+    width: 100%;
 
     &__text {
       width: 700px;
@@ -62,6 +63,7 @@
     &__img {
       overflow: hidden;
       margin-right: 30px;
+      margin-left: 33px;
       width: 350px;
       height: 350px;
       position: relative;
@@ -89,16 +91,13 @@
     @keyframes morph {
       0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      }
-      1% {
-        border-radius: 60% 41% 32% 71% / 60% 30% 70% 40%;
-      }
+     }
       50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-      }
+     }
       100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      }
-    }
+     }
+   }
   }
 }

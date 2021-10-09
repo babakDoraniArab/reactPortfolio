@@ -1,10 +1,9 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./_home.scss";
 import { FaFacebookF } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { ImLinkedin2 } from "react-icons/im";
-import { Link } from "react-router-dom";
 
 const HomeVariants = {
   initial: {
@@ -16,10 +15,32 @@ const HomeVariants = {
     y: 0,
 
     transition: {
-      delay: 0.2,
+      delay: 0.5,
       ease: "easeOut",
-      duration: 0.2,
-      type: "tween",
+      duration: 1,
+     
+    },
+  },
+  exit: {
+    y: "100vw",
+    transition: {
+      ease: "easeInOut",
+      duration: 0.4,
+    },
+  },
+};
+const childVariants = {
+  initial: {
+    opacity: 0,
+    x: "1vh",
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.4,
+      ease: "easeOut",
+      duration: 1,
     },
   },
   exit: {
@@ -42,7 +63,7 @@ const Home = () => {
     >
       <div className="home__content">
         <div className="home__content__img"></div>
-        <div className="home__content__text">
+        <motion.div variants={childVariants} className="home__content__text">
           <div className="home__content__text__title">
             <h1>AFSANE MAHDAVI</h1>
           </div>
@@ -58,7 +79,7 @@ const Home = () => {
             <RiInstagramFill className="home__content__text__social__icon" />
             <ImLinkedin2 className="home__content__text__social__icon" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
