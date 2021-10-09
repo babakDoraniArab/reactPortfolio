@@ -45,7 +45,7 @@
           text-align: center;
           justify-content: start;
           align-items: center;
-          color: $text-color-primary;
+          color: $color-primary;
 
           font-family: Poppins;
           font-style: normal;
@@ -72,9 +72,10 @@
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
       animation: morph 8s ease-in-out infinite 1s;
       background-blend-mode: multiply;
-      -webkit-box-shadow: inset 0px 0px 0px 9px #ffffff26;
-      -moz-box-shadow: inset 0px 0px 0px 9px #ffffff26;
-      box-shadow: inset 0px 0px 0px 9px #ffffff26;
+      -webkit-box-shadow: inset 0px 0px 0px 9px $color-tertiary;
+      -moz-box-shadow: inset 0px 0px 0px 9px $color-tertiary;
+      box-shadow: inset 0px 0px 0px 9px $color-tertiary;
+      // border: 10px solid #ce795883;
 
       img {
         border-color: gray;
